@@ -1,0 +1,75 @@
+<div style="text-align: center">
+<h1>Assignment 7.2</h1>
+
+<h2>Travelling Form</h2>
+<form class="example-form">
+  
+<table border="1" align="center">
+  <tr><th>Name of Cities</th></tr>
+  <tr><td>Pune</td></tr>
+    <tr><td>Mumbai</td></tr>
+      <tr><td>Chennai</td></tr>
+        <tr><td>Delhi</td>
+          <tr><td>Kolkata</td></tr>
+
+</table>
+<br>
+<h3>Select your choice from above table</h3>
+<div>
+  <mat-form-field>
+    <mat-select placeholder="Select City" [(ngModel)]="selectedValue" name="data">
+      <mat-option *ngFor="let data of Cities" [value]="data.name">
+        {{data.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>Selected city is: {{selectedValue}} </p>
+</div>
+
+
+<div>
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="start date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+
+      
+     </div>
+
+     <div>
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker1" placeholder="End date">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+     </div>
+
+     <button mat-button>Click me!</button>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
